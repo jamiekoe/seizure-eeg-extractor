@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seizure-eeg-extractor"
+version = "0.1.0"
+description = "Extract EEG signal arrays and seizure metadata from CHB-MIT and EU Epilepsy datasets."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["eeg", "seizure", "chb-mit", "epilepsy", "data-extraction"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+dependencies = [
+    "numpy>=1.23",
+    "pyEDFlib>=0.1.30",
+    "tqdm>=4.64",
+]
+
+[project.optional-dependencies]
+examples = [
+    "matplotlib>=3.6",
+]
+dev = [
+    "matplotlib>=3.6",
+    "mypy>=0.982",
+    "pytest>=7",
+]
+
+[project.scripts]
+eeg-extract = "seizure_eeg_extractor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+markers = [
+    "integration: tests that require local raw EEG datasets",
+]

@@ -1,0 +1,29 @@
+__pycache__/
+.DS_Store
+Icon?
+
+# Python packaging and local environments
+*.egg-info/
+.eggs/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.venv/
+.remote-tools/
+build/
+dist/
+htmlcov/
+pip-wheel-metadata/
+
+# Large raw and extracted EEG data
+data/
+datasets/
+extracted_data/
+*.data
+*.edf
+*.head
+*.npy
+*.pkl
+
+# Notebook checkpoints
+.ipynb_checkpoints/

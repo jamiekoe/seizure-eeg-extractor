@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software in your research, please cite it using the metadata from this file."
+title: "seizure-eeg-extractor"
+authors:
+  - family-names: "Koerner"
+    given-names: "Jamie"
+version: "0.1.0"
+license: "MIT"
+repository-code: "https://github.com/jamiekoe/seizure-eeg-extractor"
+abstract: >-
+  A Python package and command-line tool for extracting EEG signal arrays and
+  seizure metadata from CHB-MIT and EU Epilepsy/EPILEPSIAE-style datasets into
+  NumPy record folders.
+keywords:
+  - "EEG"
+  - "seizure"
+  - "epilepsy"
+  - "CHB-MIT"
+  - "EPILEPSIAE"
+  - "data extraction"
