@@ -220,11 +220,5 @@ Raw EEG files and extracted outputs are intentionally ignored by Git:
 - `*.pkl`
 - `data/`, `datasets/`, and `extracted_data/`
 
-Before publishing, inspect `git status --ignored` if you have worked with local
-data inside the repository tree.
-
-## Public Release Checklist
-
-- Verify that no raw EEG files, extracted arrays, or patient-derived outputs are
-  committed.
-- Confirm the wording and citations required by the source datasets.
+If you work with local data inside the repository tree, inspect
+`git status --ignored` before committing changes.
