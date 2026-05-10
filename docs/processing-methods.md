@@ -70,16 +70,3 @@ The extractor loads raw samples into floating point arrays and saves them as
 `float32` by default. Use `--dtype float64` or `output_dtype="float64"` when
 double precision is required. The selected dtype is recorded in `info.pkl` as
 `eeg_dtype`.
-
-## Validation Used During Cleanup
-
-During cleanup for public release, records were validated with checks for:
-
-- `eeg.npy` shape matching `num_samples` and `num_channels`
-- expected output dtype
-- seizure intervals inside `[0, num_samples]`
-- finite values in sampled windows from each record
-- matching counts of `eeg.npy` and `info.pkl` files
-
-These checks are not a substitute for scientific validation of a downstream
-analysis pipeline, but they catch extraction and annotation-boundary errors.

@@ -37,16 +37,10 @@ python -m pip install --upgrade pip
 python -m pip install seizure-eeg-extractor
 ```
 
-For development:
-
-```bash
-python -m pip install -e ".[dev]"
-```
-
 For plotting examples:
 
 ```bash
-python -m pip install ".[examples]"
+python -m pip install "seizure-eeg-extractor[examples]"
 ```
 
 ## Command Line Usage
@@ -162,8 +156,10 @@ count, start timestamp, binary sample width, and conversion factor, then loads
 the matching `.data` file with NumPy. Seizures are assigned to every recording
 whose time interval overlaps the seizure interval.
 
-More details are in [docs/processing-methods.md](docs/processing-methods.md)
-and [docs/output-format.md](docs/output-format.md).
+More details are in the
+[processing method notes](https://github.com/jamiekoe/seizure-eeg-extractor/blob/main/docs/processing-methods.md)
+and
+[output format notes](https://github.com/jamiekoe/seizure-eeg-extractor/blob/main/docs/output-format.md).
 
 ## Examples
 
@@ -175,36 +171,16 @@ python examples/plot_record.py ./extracted_data/chb17/record_0 \
   --samples 1000
 ```
 
-See [examples/README.md](examples/README.md).
+See the
+[examples README](https://github.com/jamiekoe/seizure-eeg-extractor/blob/main/examples/README.md).
 
 ## Citation
 
 If you use this software in academic work, please cite the repository using the
-metadata in [CITATION.cff](CITATION.cff).
+metadata in
+[CITATION.cff](https://github.com/jamiekoe/seizure-eeg-extractor/blob/main/CITATION.cff).
 
 ## License
 
-This project is distributed under the [MIT License](LICENSE).
-
-## Testing
-
-Run the lightweight test suite:
-
-```bash
-pytest
-```
-
-Integration tests require local raw dataset copies and are skipped by default:
-
-```bash
-CHBMIT_PATH=/path/to/chbmit/1.0.0 CHBMIT_PATIENT=chb01 pytest -m integration
-EU_PATH=/path/to/Epilepsiae EU_PATIENT=pat_FR_253 pytest -m integration
-```
-
-The integration tests write extracted records to pytest-managed temporary
-directories, not into the raw dataset folders.
-
-During public-release cleanup, the extractor was also exercised against
-real CHB-MIT and EU dataset samples. Processed records were verified for array
-shape, dtype, seizure interval bounds, finite sample windows, and cleanup after
-verification.
+This project is distributed under the
+[MIT License](https://github.com/jamiekoe/seizure-eeg-extractor/blob/main/LICENSE).
