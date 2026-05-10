@@ -208,17 +208,3 @@ During public-release cleanup, the extractor was also exercised against
 real CHB-MIT and EU dataset samples. Processed records were verified for array
 shape, dtype, seizure interval bounds, finite sample windows, and cleanup after
 verification.
-
-## Repository Hygiene
-
-Raw EEG files and extracted outputs are intentionally ignored by Git:
-
-- `*.edf`
-- `*.data`
-- `*.head`
-- `*.npy`
-- `*.pkl`
-- `data/`, `datasets/`, and `extracted_data/`
-
-If you work with local data inside the repository tree, inspect
-`git status --ignored` before committing changes.

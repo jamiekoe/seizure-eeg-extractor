@@ -4,7 +4,7 @@ title: "seizure-eeg-extractor"
 authors:
   - family-names: "Koerner"
     given-names: "Jamie"
-version: "0.1.1"
+version: "0.1.2"
 license: "MIT"
 repository-code: "https://github.com/jamiekoe/seizure-eeg-extractor"
 abstract: >-
